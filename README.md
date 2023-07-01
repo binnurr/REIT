@@ -1,5 +1,5 @@
 # RoREIT - VoREIT
-RoREIT: Robotic Requirements Elicitation Interview Trainer
+RoREIT: Robotic Requirements Elicitation Interview Trainer \\
 VoREIT: Voice-based Requirements Elicitation Interview Trainer
 
 We propose REIT, an extensible architecture for Requirements Elicitation Interview Trainer system based on emerging technologies for education. It has two separate phases. The first is the interview phase, where the student acts as an interviewer and the system as an interviewee. The second is the feedback phase, where the system evaluates the student's performance and provides contextual and behavioral feedback to enhance their interviewing skills. We demonstrate the applicability of REIT by implementing two instances: RoREIT with an embodied physical robotic agent and VoREIT with a virtual voice-only agent. This repository contains the code base for implementation of RoREIT and VoREIT.
