@@ -1,0 +1,50 @@
+Start,Greetings and introduction
+SG,Thanks for asking, I'm fine
+SM,Thanks for asking, I'm fine
+SB,Sure! Go ahead.
+SGM,I'm a research engineer here at CoolResearch. I research the brains of fruit flies. I want to have a tool that would help me to efficiently report my research output.
+SGG,I'm a research engineer here at CoolResearch. I research the brains of fruit flies. I want to have a tool that would help me to efficiently report my research output.
+SGB,Okay, go ahead
+SGGG,I analyze brain scans and keep the information in separate files. A desktop tool processes these files and creates a report with a tabular format.
+SGGGG,There are two challenges: First, I cannot reach my data from other locations. Second, I want to represent other graphs and charts to summarize the data I collect. I think an online tool would be useful for easy access and visualization.
+SGGGGG,I want to choose the chart types and data fields and preview and edit the charts within the tool.
+SGGGGGG,In addition to generating tables and charts, I also visualize and understand the raw data, pre-process and analyzei and then model the data.
+SGGGGGGG,Yes, I would like to follow my workflow within the tool.
+SGGGGGGGG,I collaborate with different scientists around the world. Also, I want my work to be reproduced and recognized.
+SGGGGGGGGG,To increase the accuracy of my analysis results, the data needs to be cleaned and prepared.
+SGGGGGGGGGG,Yes, there are several research asistant to format the data, and they'll be handling data formatting.
+SGGGGGGGGGGG,Right now, I have labelled data. I want to present the ratio of each label in my data set.
+SGGGGGGGGGGGG,The most frequently generated chart has to be the chart that shows the change in the value of the fields against time.
+SGGGGGGGGGGGGG,Sure. Just give me a call when you need their information.
+SGGGGGGGGGGGGGG,My collegues usually handles the publication management.
+SGGGGGGGGGGGGGGG,My collegues need to obtain approval from the board of the institue before publishing the data.
+SGGGGGGGGGGGGGGGG,Sure, I can send you their email addresses!
+SGGGGGGGGGGGGGGGGG,No, I think we talked about most of the things, and I really enjoyed our conversation. I'm excited for what solution you and your team come up with.
+SGGGGGGGGGGGGGGGGGG,Thanks! You too.
+E,Greetings and introduction
+SGBB,I'm not sure I understand what you mean. I guess I'll go with whatever is better for my research.
+SGBBB,I also want to share my report and data online.
+SGGGM,The tool would increase the usefulness and the aesthetics of my charts.
+SGGGMB,Mmm fine. If it helps. I'm not very good at technology so I'll follow your suggestions.
+SGGGGGB,In addition to generating tables and charts, I also visualize and understand the raw data, pre-process and analyzei and then model the data.
+SGGGGGGB,I'm not sure how exactly do these with the tool, but I the tool to be efficient.
+SGGGGGGGM,I collaborate with different scientists around the world. Also, I want my work to be reproduced and recognized.
+SGGGGGGGB,I honestly don't know what a file transfer protocol is. I just want to share my data.
+SGGGGGGGGM,To increase the accuracy of my analysis results, the data needs to be cleaned and prepared.
+SGGGB,Not really, I still want to edit my text, table and charts myself when necessary.
+SGGGGGGGGB,I use popular Python data processing and machine learning libraries. I am willing to use others if they are more efficient and accurate.
+SGGGGGGGGBB,Yes, it sounds correct.
+SGGGGGGGGGM,Yes, there are several research asistant to format the data, and they'll be handling data formatting.
+SGGGGGGGGGGM,Right now, I have labelled data. I want to present the ratio of each label in my data set.
+SGGGGGGGGGGB,There are several fields in the data. I would like to create charts using the fields I choose to include, showing trends and correlations in my data.
+SGGGGGGGGGGGM,I currently create charts to present the changes in brain size, color, and shape.
+SGGGGGGGGGGGGB,I don't personally collect the data,  my assistants help me with it.
+SGGGGGGGGGGGGBB,I want to increase visibility of my research but also control the terms and conditions to use my output.
+SGGGGGGGGGGGGGM,My collegues usually handles the publication management.
+SGGGGGGGGGGGGGGM,My collegues need to obtain approval from the board of the institue before publishing the data.
+SGGGGGGGGGGGGGGGM,No, only me and my collegues can publish data.
+SGGGGGGGGGGGGGGB,Yeah, that might be a good idea. But more importantly I should be able to access the data from my tool.
+SGGGGGGGGGGGGGGGB,I'm not sure what system they currenly work on. I think they have data on excel since that's what they send me as report.
+SGGGGGGGGGGGB,I want to collect as many features as possible. I want to project future changes in the brain's shape, size, color, and density. Honestly, there are so many charts to be built!
+SGGGGGGGGGGGGM,Yes they do. Just give me a call when you need their information.
+SGGM,I analyze brain scans and keep the information in separate files. A desktop tool processes these files and creates a report with a tabular format.
