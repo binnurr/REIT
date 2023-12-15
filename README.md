@@ -1,6 +1,5 @@
-# 
+# Exploring the REIT Architecture for Requirements Elicitation Interview Training with Robotic and Virtual Tutors
 ## Introduction
-RoREIT - VoREIT
 RoREIT: Robotic Requirements Elicitation Interview Trainer  
 VoREIT: Voice-based Requirements Elicitation Interview Trainer  
 
@@ -8,6 +7,8 @@ We propose REIT, an extensible architecture for Requirements Elicitation Intervi
 
 ## Architecture Overview
 
+
+<img src="https://github.com/binnurr/REIT/blob/main/architecture/IT4RE.pdf" width="800" />
 
 ## Structure of the Repository
 
