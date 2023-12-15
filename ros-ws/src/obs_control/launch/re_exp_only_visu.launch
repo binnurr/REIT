@@ -1,8 +1,0 @@
-<launch>
-<arg name="uname" />
-<arg name="session" />
-
-<node pkg="visu_ros_msg" type="visualizer.py" name="my_visu_ros_msg" args="$(arg uname) $(arg session)" output="screen"/>
-<node pkg="feedback_analyzer" type="feedback_analyzer.py" name="my_feedback_analyzer" args="$(arg uname) $(arg session)" output="screen"/>
-
-</launch>
