@@ -8,7 +8,7 @@ We propose REIT, an extensible architecture for Requirements Elicitation Intervi
 ## Architecture Overview
 ![Image 1](./architecture/IT4RE.pdf)
 
-<img src="architecture/IT4RE.pdf" width="400" />
+<img src="./architecture/IT4RE.pdf" width="400" />
 
 ## Structure of the Repository
 
