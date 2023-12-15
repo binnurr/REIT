@@ -1,0 +1,28 @@
+hello-Hello! I am Nao. I am your personal coach. I will help you to do fitness. You will imitate me while I am performing motions. Are you ready?
+motion1-First, We will perform right lumber stretch.
+motion2-We will perform left lumber stretch.
+motion3-We will perform upper arm stretching.
+motion4-We will perform back strength.
+end-Our exercise session is over. Now, I am calculating your score.
+good1-You are doing great.
+good2-You are fabulous.
+good3-Nice job, buddy.
+good4-I love the way you perform.
+speed-You may speed up.
+slow-You may slow down.
+raiseleftarmlittle-Raise your left arm, a little more.
+raiserightarmlittle-Raise your right arm, a little more.
+raiseleftarm-Raise your left arm, more.
+raiserightarm-Raise your right arm, more.
+openarmslittle-Open your arms, a little more.
+closearmslittle-Close your arms, a little more.
+openarms-Open your arms, more.
+closearms-Close your arms, more.
+bendleftelbowlittle-Bend your left elbow, a little more.
+bendrightelbowlittle-Bend your right elbow, a little more.
+bendleftelbow-Bend your left elbow, more.
+bendrightelbow-Bend your right elbow, more.
+bendleftelbowlittleless-Bend your left elbow, a little less.
+bendrightelbowlittleless-Bend your right elbow, a little less.
+bendleftelbowless-Bend your left elbow, less.
+bendrightelbowless-Bend your right elbow, less.

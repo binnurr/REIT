@@ -1,0 +1,13 @@
+No rapport with customer-You need to show that you care about the customer. Be appreciative for the customer's participation in the interview.
+Asking long/complex question-Ask short and precise questions.Long and complex question can overwhelm the customer.
+Unnatural dialogue style-Give the customer freedom in what they want to say. Let the customers create scenarios.
+Lack of preparation-You may not know everything in advance but research about the domain to get an idea of the vocabulary that the customer might use.
+Lack of planning for interview-You may not know everything in advance but research about the domain to get an idea of the vocabulary that the customer might use.
+Asking customer for solution-Don't explicitly ask your stakeholders what they want.You need to collect your stakeholder's needs and learn their perspective and domain.
+Influencing customer-Try to understand the customer's problems first, do not look for a solution right away.
+Asking vague question-Ask open ended questions. Let the customer speak freely. Do not ask questions that might confuse the customers.
+Asking technical question-Understand that many stakeholders are not familiar with computer science terminology and concepts.
+Not asking about existing system-You need to understand the system as is. You need to identify what are the problems with the existing system or process and what you to modify, replace or integrate.
+Not identifying stakeholders-Your interviewee only knows part of the information. You need to understand which information the interviewee does not know and ask who could answer your additional questions.
+Asking unnecessary question-All questions need to be relevant for the development of the system.
+Incorrect ending of interview-Thank them for being in the interview, explain what you learnt in the meeting and what the next steps are.

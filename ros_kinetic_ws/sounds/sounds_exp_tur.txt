@@ -1,0 +1,7 @@
+wave-Bana el sallar mısınız?
+intro-Merhaba, benim adım Bilge. Ben ve başka yerlerdeki arkadaşlarım insanlardan bize birtakım nesneleri öğretmesini istiyoruz. Öğrendiğimiz bilgileri bulut sistemlerde birleştiriyoruz. Bize öğretmenlik yapmayı kabul ettiğiniz için teşekkür ederim. Bana nesneleri teker teker öğretmenizi rica ediyorum. Hadi başlayalım.
+next-Teşekkürler, sıradaki nesneye geçelim.
+getlabel-Bu nesnenin adı neydi?
+trainingcompleted-Tüm nesneleri gördüm. Şu an aldığım bilgilerle öğrenme modelimi güncelliyorum. Biraz bekleyin lütfen.
+starttesting-Şimdi ne kadar öğrendiğimi test edelim. Bana nesneleri teker teker gösterin. Ben de bilmeye çalışayım. Hadi başlayalım.
+nexttest-Sıradaki nesneye geçelim.

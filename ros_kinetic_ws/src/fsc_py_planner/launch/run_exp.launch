@@ -1,0 +1,9 @@
+<launch>
+<arg name="uname" />
+<arg name="session" />
+<arg name="scenario" />
+
+<node pkg="fsc_py_planner" type="main.py" name="my_fsc_py_planner" args="$(arg session) $(arg scenario)" output="screen"/>
+<node name="record" pkg="rosbag" type="record" args="-a -o /home/catkin_ws/exp_bag_files/$(arg uname)_$(arg session)_$(arg scenario).bag"/>
+
+</launch>

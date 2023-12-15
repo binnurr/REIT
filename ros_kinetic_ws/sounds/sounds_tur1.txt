@@ -1,0 +1,37 @@
+wave-Bana el sallar mısınız?
+hello-Merhaba, benim adım Leylaaa. Sizin egzersiz eğitmeninizim. Sizin adınızı öğrenebilir miyim?
+hello2-Egzersiz seansımıza başlayacağız. Ben egzersiz hareketlerini yaparken siz de beni takip ederek tekrar edeceksiniz. Hazır mısınız?
+motion1-Şimdi sol elimizi belimize koyarak sağ tarafa doğru esniyoruz.
+motion2-Aynısını ters yöne yapıyoruz. Sağ elimizi belimize koyarak sol tarafa doğru esniyoruz.
+motion3-Şimdiki hareketimizde kollarımızı yana açıp kapatıyoruz.
+motion4-Kollarımızı dirseklerden doksan derece büküp göğsümüzde birleştirip açıyoruz.
+motion5-Şimdi ise kollarımızı serbestçe yukarı aşağı hareket ettiriyoruz.
+motion6-İki kolumuzu aynı anda öne doğru kaldırıyoruz, indiriyoruz. Sonra, yana açıyoruz, indiriyoruz. Hadi başlayalım.
+motion7-Sol dizimizi yavaşça yukarı kaldırıp indiriyoruz.
+motion8-Sağ dizimizle hareketi tekrarlıyoruz.
+motion9-Sol bileğimizi yukarı aşağı hareket ettiriyoruz.
+motion10-Diğer bileğimizle devam ediyoruz.
+sitForLegMotions-Şimdi bacak hareketlerine geçiyoruz. Lütfen siz de oturun.
+end-Egzersiz seansımız burada sona erdi. Şimdi başarı puanınızı hesaplayıp size söyleyeceğim.
+good1-Çok güzel yapıyorsunuz.
+good2-Harika.
+good3-Evet, güzel.
+good4-Güzel, devam ediyoruz.
+speed-Biraz daha hızlı.
+slow-Biraz yavaşla.
+raiseleftarmlittle-Sol kolu biraz daha kaldırıyoruz.
+raiserightarmlittle-Sağ kolunu biraz daha kaldır.
+raiseleftarm-Sol kolunu yukarı kaldır.
+raiserightarm-Sağ kolunu yukarı kaldır.
+openarmslittle-Kollarını biraz daha açar mısın?
+closearmslittle-Kollarını biraz daha kapatır mısın?
+openarms-Kollarını yana açar mısın?
+closearms-Kollarımızı kapatıyoruz.
+bendleftelbowlittle-Sol dirseğini biraz daha bük.
+bendrightelbowlittle-Sağ dirseğini biraz daha bük.
+bendleftelbow-Sol dirseğini biraz daha bük.
+bendrightelbow-Sağ dirseğini biraz daha bük.
+bendleftelbowlittleless-Sol dirseğini biraz daha bük.
+bendrightelbowlittleless-Sağ dirseğini biraz daha bük.
+bendleftelbowless-Sol dirseğini biraz daha bük.
+bendrightelbowless-Sağ dirseğini biraz daha bük.

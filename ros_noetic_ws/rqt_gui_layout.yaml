@@ -1,0 +1,7 @@
+publish_interval: 100
+settings:
+  /is_start/data: {is_repeat: false, max: 0, min: 0}
+  /selected_feedback_ques/data: {is_repeat: false, max: 0, min: 0}
+  /selected_ques/data: {is_repeat: false, max: 0, min: 0}
+  /repeat_request/data: {is_repeat: false, max: 0, min: 0}
+texts: [/is_start/data, /selected_ques/data, /repeat_request/data, /selected_feedback_ques/data]
