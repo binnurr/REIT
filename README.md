@@ -9,7 +9,12 @@ We propose REIT, an extensible architecture for Requirements Elicitation Intervi
 <img src="https://github.com/binnurr/REIT/assets/10512261/cf442485-b3a1-475b-98d8-b34b6213fe9b" width=85% height=85%>
 
 ## Structure of the Repository
-
+### Behavioral Feedback Evaluator
+The Behavioral Feedback Evaluator folder includes the source code of the Behavioral Feedback Evaluator and its core components.
+### Ros Noetic Ws
+The Ros Noetic Ws folder includes the source code of the stream recorder, dialogue displayer, and contextual feedback analyzer. It also includes the speech synthesizer component of the VoREIT agent.
+### Ros Kinetic Ws
+The Ros Kinetic Ws folder includes the source code of the interaction engine and scenario and feedback databases. It also includes trainer agent implementations.
 
 ## Installation
 
