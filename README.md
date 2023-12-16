@@ -81,8 +81,12 @@ binnurgorer@Binnurs-MBP-Lab ros_kinetic_ws % docker build -t ros_kinetic_demo_ap
 
 ## Execution of VoREIT
 ```console
+```console
 binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
-binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roscore
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_HOSTNAME=Binnurs-MBP-Lab.home    
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roscore
+```
 ```
 
 ```console
@@ -114,7 +118,9 @@ conda activate BehavioralFeedback
 ```
 ```console
 binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
-binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roscore
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_HOSTNAME=Binnurs-MBP-Lab.home    
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roscore
 ```
 
 ```console
