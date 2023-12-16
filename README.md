@@ -153,7 +153,7 @@ For the current implementation, we use a separate Native Linux on the amd64 proc
 
 All the examples in this repository are distributed under a Non-Commercial license. If you use this environment, you have to agree with the following items:
 
-- To cite our associated references in any of your publications that make any use of these examples.
+- To cite our associated references in any of your publications that use these examples.
 
 - To use the environment for research purposes only.
 
