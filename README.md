@@ -150,6 +150,7 @@ would work. An alternative approach would use ROS Naoqi driver (https://index.ro
 For the current implementation, we use a separate Native Linux on the amd64 processor to execute RoREIT's robotic agent module and control the Nao robot.
 
 **Thanks**
+
 https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
 https://github.com/pablovin/FaceChannel/
 
