@@ -149,6 +149,10 @@ with our Kinetic docker image executed on the M1 processor. If your architecture
 would work. An alternative approach would use ROS Naoqi driver (https://index.ros.org/p/naoqi_driver/) to access the Naoqi API of the robot. We will try it out soon.
 For the current implementation, we use a separate Native Linux on the amd64 processor to execute RoREIT's robotic agent module and control the Nao robot.
 
+**Thanks**
+https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
+https://github.com/pablovin/FaceChannel/
+
 **License**
 
 All the examples in this repository are distributed under a Non-Commercial license. If you use this environment, you have to agree with the following items:
