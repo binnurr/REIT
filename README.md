@@ -31,8 +31,8 @@ Install OBS Studio (required for video streaming of user's video in Zoom):
 https://obsproject.com/download
 
 Install ROS (Robot Operating System) 
- For Linux: https://wiki.ros.org/noetic/Installation
- For Mac: https://robostack.github.io/GettingStarted.html
+ *For Linux: https://wiki.ros.org/noetic/Installation
+ *For Mac: https://robostack.github.io/GettingStarted.html
  
 Download and install NAOqi http://doc.aldebaran.com/2-8/dev/python/install_guide.html
 
