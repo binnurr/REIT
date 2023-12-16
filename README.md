@@ -141,6 +141,7 @@ binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
 ```
 
 **Implementation Design Decisions and Further Developments**
+
 The Naoqi Python SDK contains native libraries compiled for Linux and amd64 (aka Intel x64) processors. The M1 Macbook has an arm64 processor.
 The executable library `_qi.so` is reported as non-existent because it cannot execute it. 
 The Naoqi docker solution mentioned [here](https://github.com/remcorakers/naoqi-docker) does not work
