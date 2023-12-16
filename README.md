@@ -171,5 +171,5 @@ Binnur Gorer - binnur.gorer@boun.edu.tr
 
 ## Acknowledgements
 
-* ROS on Docker on macOS as the slave node and connect to the ROS Master in the host: https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
+* Solution to get ROS messages from ROS Master running on the host from ROS on Docker as the slave node as ```--net=host``` option does not work in Mac: https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
 * Facial expression analyzer library: https://github.com/pablovin/FaceChannel/
