@@ -151,8 +151,8 @@ For the current implementation, we use a separate Native Linux on the amd64 proc
 
 **Thanks**
 
-https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
-https://github.com/pablovin/FaceChannel/
+* ROS on Docker on macOS as the slave node and connect to the ROS Master in the host: https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
+* Facial expression analyzer library: https://github.com/pablovin/FaceChannel/
 
 **License**
 
