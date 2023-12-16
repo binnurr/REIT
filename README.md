@@ -140,8 +140,8 @@ binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roslaunch obs_control re_exp.launch uname:=user session:=robot
 ```
 
-**Roadmap**
-* Implementation Design Decisions and Further Developments
+## Roadmap
+### Implementation Design Decisions and Further Developments
 The Naoqi Python SDK contains native libraries compiled for Linux and amd64 (aka Intel x64) processors. The M1 Macbook has an arm64 processor.
 The executable library `_qi.so` is reported as non-existent because it cannot execute it. 
 The Naoqi docker solution mentioned [here](https://github.com/remcorakers/naoqi-docker) does not work
@@ -149,7 +149,7 @@ with our Kinetic docker image executed on the M1 processor. If your architecture
 would work. An alternative approach would use ROS Naoqi driver (https://index.ros.org/p/naoqi_driver/) to access the Naoqi API of the robot. We will try it out soon.
 For the current implementation, we use a separate Native Linux on the amd64 processor to execute RoREIT's robotic agent module and control the Nao robot.
 
-**License**
+## License 
 
 All the examples in this repository are distributed under a Non-Commercial license. If you use this environment, you have to agree with the following items:
 
@@ -159,11 +159,11 @@ All the examples in this repository are distributed under a Non-Commercial licen
 
 - To not provide the environment to any second parties.
 
-**Contact**
+## Contact
 
 Binnur Gorer - binnur.gorer@boun.edu.tr
 
-**Acknowledgements**
+## Acknowledgements
 
 * ROS on Docker on macOS as the slave node and connect to the ROS Master in the host: https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
 * Facial expression analyzer library: https://github.com/pablovin/FaceChannel/
