@@ -17,6 +17,7 @@ The Ros Noetic Ws folder includes the source code of the stream recorder, dialog
 The Ros Kinetic Ws folder includes the source code of the interaction engine and scenario and feedback databases. It also includes trainer agent implementations.
 
 ## Installation
+We use two different distributions of ROS: ROS Kinetic and ROS Noetic. ROS Kinetic is an older distribution but works with Python2, which is required to run the NAOqi SDK of the Nao robot. 
 
 ### Step 1:
 
