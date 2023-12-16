@@ -70,7 +70,7 @@ conda deactivate
 ```
 
 ### Step 4: ROS Kinetic Environment
-Pull `ros:kinetic-ros-base-xenial` image. For more details, please refer to [here](https://hub.docker.com/layers/library/ros/kinetic-ros-base-xenial/images/sha256-a42bae4b8b66c2e256a047bf329f11730265a12a3ed29b10631f15591087112d).
+We use [Docker for ROS](https://hub.docker.com/_/ros) approach to create ROS Kinetic environment. Pull `ros:kinetic-ros-base-xenial` image. For more details, please refer to [here](https://hub.docker.com/layers/library/ros/kinetic-ros-base-xenial/images/sha256-a42bae4b8b66c2e256a047bf329f11730265a12a3ed29b10631f15591087112d).
 ```console
 docker pull ros:kinetic-ros-base-xenial
 ```
