@@ -30,8 +30,7 @@ https://docs.docker.com/get-docker/
 Install OBS Studio (required for video streaming of user's video in Zoom):
 https://obsproject.com/download
 
-Install ROS (Robot Operating System) 
-
+Install ROS (Robot Operating System):
   * For Linux: https://wiki.ros.org/noetic/Installation
   * For Mac: https://robostack.github.io/GettingStarted.html
  
