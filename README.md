@@ -140,13 +140,21 @@ binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roslaunch obs_control re_exp.launch uname:=user session:=robot
 ```
 
+**Implementation Design Decisions and Further Developments**
+The Naoqi Python SDK contains native libraries compiled for Linux and amd64 (aka Intel x64) processors. The M1 Macbook has an arm64 processor.
+The executable library `_qi.so` is reported as non-existent because it cannot execute it. 
+The Naoqi docker solution mentioned [here](https://github.com/remcorakers/naoqi-docker) does not work
+with our Kinetic docker image executed on the M1 processor. If your architecture is amd64, adding the Naoqi installations to the Dockerfile for the Kinetic environment
+would work. An alternative approach would use ROS Naoqi driver (https://index.ros.org/p/naoqi_driver/) to access the Naoqi API of the robot. We will try it out soon.
+For the current implementation, we use a separate Native Linux on the amd64 processor to execute RoREIT's robotic agent module and control the Nao robot.
+
 **License**
 
 All the examples in this repository are distributed under a Non-Commercial license. If you use this environment, you have to agree with the following items:
 
-- To cite our associated references in any of your publication that make any use of these examples.
+- To cite our associated references in any of your publications that make any use of these examples.
 
-- To use the environment for research purpose only.
+- To use the environment for research purposes only.
 
 - To not provide the environment to any second parties.
 
