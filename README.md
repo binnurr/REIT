@@ -36,7 +36,7 @@ Install ROS (Robot Operating System)
 Download and install NAOqi http://doc.aldebaran.com/2-8/dev/python/install_guide.html
 
 ### Step 2:
-```console
+```sh
 mamba activate ros_env
 conda install pandas=2.1.4
 conda install seaborn=0.13.0
@@ -50,7 +50,7 @@ mamba deactivate
 ```
 
 ### Step 3:
-```console
+```sh
 conda create --name BehavioralFeedback python=3.10
 conda activate BehavioralFeedback 
 conda install h5py=3.9.0
