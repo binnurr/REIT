@@ -55,20 +55,19 @@ mamba deactivate
 
 ### Step 3:
 ```sh
-conda create --name BehavioralFeedback python=3.10
-conda activate BehavioralFeedback 
-conda install h5py=3.9.0
-conda install keras=2.12.0
-conda install numpy=1.26.2
-conda install opencv=4.7.0
-conda install scipy=1.11.4
-conda install tensorflow=2.12.1
-conda install pytz=2023.3.post1
-conda install matplotlib=3.8.2
-pip install deffcode==0.2.5
+conda create --name BehavioralFeedback python=3.8
+conda activate BehavioralFeedback
+conda install -c apple tensorflow-deps
+pip install tensorflow-macos
+pip install tensorflow-metal
+pip install opencv-python
+pip install scipy
+pip install pytz
+pip install matplotlib
+pip install deffcode
 ```
 ```console
-touch /Users/binnurgorer/miniforge3/envs/BehavioralFeedbackEval/lib/python3.10/site-packages/reit.pth
+touch /Users/binnurgorer/miniforge3/envs/BehavioralFeedbackEval/lib/python3.8/site-packages/reit.pth
 add your_working_directory/REIT/BehavioralFeedbackEvaluator/resources
 conda deactivate
 ```
