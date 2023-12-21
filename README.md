@@ -22,14 +22,15 @@ We use two different distributions of ROS: ROS Kinetic and ROS Noetic. ROS Kinet
 ### Step 1:
 
 Install miniforge which is a minimal installer for Conda and Mamba specific to conda-forge (conda package manager)
-https://github.com/conda-forge/miniforge
+- https://github.com/conda-forge/miniforge
 
 Install Docker:
-https://docs.docker.com/get-docker/
+- https://docs.docker.com/get-docker/
 
-Install OBS Studio (required for video streaming of user's video in Zoom):
-https://obsproject.com/download (version 28.0.0)
-
+Install [OBS Studio](https://obsproject.com/) (required for video streaming of user's video in Zoom):
+- https://github.com/obsproject/obs-studio/releases/tag/28.0.0
+> [!NOTE]  
+> OBS v28.0.0 comes with obs-websocket v5, which is incompatible with obs-websocket-py library we use in our system. We need to install obs-websocket 4.9.1 from https://github.com/obsproject/obs-websocket/releases 
 
 Install ROS (Robot Operating System):
   * For Linux: https://wiki.ros.org/noetic/Installation
@@ -49,7 +50,7 @@ conda install pyyaml=5.4.1
 conda install pydub=0.25.1
 conda install gtts=2.4.0
 conda install pyqt=5.15.7
-pip install obs-websocket-py
+pip install obs-websocket-py==0.5.3
 mamba install ros-noetic-rqt-ez-publisher
 mamba deactivate
 ```
