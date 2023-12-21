@@ -43,6 +43,15 @@ Download and install NAOqi http://doc.aldebaran.com/2-8/dev/python/install_guide
 
 OBS Configuration:
 For the obs-websocket document, please refer to https://github.com/obsproject/obs-websocket/blob/4.x-compat/docs/generated/protocol.md
+Set the output recording path as below:
+```sh
+($REIT_HOME)/BehavioralFeedbackEvaluator/resources/experiment/videos
+```
+Set the values for Base Resolution, Output Resolution, and Common FPS values as shown in the figure.
+![obs_config](https://github.com/binnurr/REIT/assets/10512261/48cd2ed2-28b2-4832-8325-5171ccdbb194)
+
+
+
 
 ### Step 2:
 ```sh
