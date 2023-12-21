@@ -41,6 +41,9 @@ Install ROS (Robot Operating System):
  
 Download and install NAOqi http://doc.aldebaran.com/2-8/dev/python/install_guide.html
 
+OBS Configuration:
+For the obs-websocket document, please refer to https://github.com/obsproject/obs-websocket/blob/4.x-compat/docs/generated/protocol.md
+
 ### Step 2:
 ```sh
 mamba activate ros_env
