@@ -11,7 +11,7 @@ class VideoClipTimeListener:
         rospy.init_node('video_clip_time_listener', anonymous=True)
         self.subject_name = subject_name
         self.session_type = session_type
-        file_p_prefix = "/Users/binnurgorer/Documents/binnur_projects/FaceChannel-master/resources/experiment/requests"
+        file_p_prefix = os.path.join(os.environ["REIT_HOME"], "BehavioralFeedbackEvaluator/resources/experiment/requests")
         self.request_fp = os.path.join(file_p_prefix, subject_name, session_type, "request.csv")
         try:
             os.remove(self.request_fp)

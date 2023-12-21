@@ -166,7 +166,7 @@ class VideoGUI(Frame):
         button1.pack()
         button2.pack()
         """
-        file_p_prefix = "/Users/binnurgorer/Documents/binnur_projects/FaceChannel-master/resources/experiment/results"
+        file_p_prefix = os.path.join(os.environ["REIT_HOME"], "BehavioralFeedbackEvaluator/resources/experiment/results")
         self.overall_result_img_fp = os.path.join(file_p_prefix, subject_name, session, "overall_results.png")
 
         self.image_path = os.path.join(RosPack().get_path("visu_ros_msg"), "include", "visu_ros_msg")
