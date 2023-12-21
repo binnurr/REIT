@@ -50,7 +50,7 @@ Download and install NAOqi http://doc.aldebaran.com/2-8/dev/python/install_guide
 * Set the values for Base Resolution, Output Resolution, and Common FPS values as shown in the figure.
 ![obs_config](https://github.com/binnurr/REIT/assets/10512261/48cd2ed2-28b2-4832-8325-5171ccdbb194)
 * Ensure Server port and password (can be accessed via OBS->Tools->Web server settings) are the same as defined in
-  https://github.com/binnurr/REIT/blob/4d0526d4d5ede364a0dc863301a7dc29650e11e6/ros_noetic_ws/src/obs_control/scripts/obs_control.py#L13-L14C35
+  https://github.com/binnurr/REIT/blob/58de3c65b3b6016ba063ea0dd86bd7d2ec042e79/ros_noetic_ws/src/obs_control/scripts/obs_control.py#L13-L14
 
 
 
