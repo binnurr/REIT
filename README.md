@@ -71,9 +71,9 @@ pip install deffcode
 > [!IMPORTANT]  
 > For M1 Mac users, execute the above commands in a terminal that is started by enabling Rosetta.
 
-| :warning: WARNING          |
-|:---------------------------|
-| Recent version of tensorflow-metal produces in incorrect results with the preloaded models on M1 Mac (check the reported issues [here]()). Please be careful with the versions.|
+> [!WARNING]
+> Recent version of ```tensorflow-metal``` produces incorrect results with the preloaded models on M1 Mac (check the reported issues [here]()). Please be careful with the versions.
+> To check the compatible tensorflow-metal version, please check https://pypi.org/project/tensorflow-metal/
 
 
 
