@@ -68,9 +68,14 @@ pip install matplotlib
 pip install deffcode
 ```
 
+> [!IMPORTANT]  
+> For M1 Mac users, execute the above commands in a terminal that is started by enabling Rosetta.
+
 | :warning: WARNING          |
 |:---------------------------|
-| Recent version of tensorflow-metal results in incorrect results with the preloaded models on M1 Mac. Please be careful with the versions.|
+| Recent version of tensorflow-metal produces in incorrect results with the preloaded models on M1 Mac (check the reported issues [here]()). Please be careful with the versions.|
+
+
 
 ```console
 touch /Users/binnurgorer/miniforge3/envs/BehavioralFeedbackEval/lib/python3.8/site-packages/reit.pth
