@@ -73,7 +73,7 @@ pip install deffcode
 
 > [!WARNING]
 > Recent version of ```tensorflow-metal``` produces incorrect results with the preloaded models on M1 Mac (check the reported issues [here]()). Please be careful with the versions.
-> To check the compatible tensorflow-metal version, please check https://pypi.org/project/tensorflow-metal/
+> To check the compatible ```tensorflow-metal``` version, please refer to https://pypi.org/project/tensorflow-metal/
 
 
 
@@ -185,7 +185,11 @@ Binnur Gorer - binnur.gorer@boun.edu.tr
 
 ## Acknowledgements
 
-* Solution to get ROS messages from ROS Master running on the host from ROS on Docker as the slave node as ```--net=host``` option does not work in Mac: https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
-* Installation of Tensorflow on M1 Mac: https://caffeinedev.medium.com/how-to-install-tensorflow-on-m1-mac-8e9b91d93706
-* Facial expression analyzer library: https://github.com/pablovin/FaceChannel/
+* Solution to get ROS messages from ROS Master running on the host from ROS on Docker as the slave node as ```--net=host``` option does not work in Mac
+  -https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
+* Installation of Tensorflow on M1 Mac:
+  - https://caffeinedev.medium.com/how-to-install-tensorflow-on-m1-mac-8e9b91d93706
+  - https://stackoverflow.com/questions/72964800/what-is-the-proper-way-to-install-tensorflow-on-apple-m1-in-2022
+* Facial expression analyzer library
+  - https://github.com/pablovin/FaceChannel/
   
