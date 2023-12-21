@@ -28,7 +28,8 @@ Install Docker:
 https://docs.docker.com/get-docker/
 
 Install OBS Studio (required for video streaming of user's video in Zoom):
-https://obsproject.com/download
+https://obsproject.com/download (version 28.0.0)
+
 
 Install ROS (Robot Operating System):
   * For Linux: https://wiki.ros.org/noetic/Installation
@@ -66,6 +67,10 @@ pip install pytz
 pip install matplotlib
 pip install deffcode
 ```
+| :warning: WARNING          |
+|:---------------------------|
+| Recent version of tensorflow-metal results in incorrect results with the preloaded models on M1 Mac. Please be careful with the versions.|
+
 ```console
 touch /Users/binnurgorer/miniforge3/envs/BehavioralFeedbackEval/lib/python3.8/site-packages/reit.pth
 add your_working_directory/REIT/BehavioralFeedbackEvaluator/resources
