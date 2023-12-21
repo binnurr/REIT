@@ -30,7 +30,7 @@ Install Docker:
 Install [OBS Studio](https://obsproject.com/) (required for video streaming of user's video in Zoom):
 - https://github.com/obsproject/obs-studio/releases/tag/28.0.0
 > [!NOTE]  
-> OBS v28.0.0 comes with obs-websocket v5, which is incompatible with obs-websocket-py library we use in our system. We need to install obs-websocket 4.9.1 from https://github.com/obsproject/obs-websocket/releases 
+> OBS v28.0.0 comes with obs-websocket v5, which is incompatible with ```obs-websocket-py``` library we use in our system. We need to separately install version 4 of the WebSocket plugin from https://github.com/obsproject/obs-websocket/releases/tag/4.9.1-compat 
 
 Install ROS (Robot Operating System):
   * For Linux: https://wiki.ros.org/noetic/Installation
