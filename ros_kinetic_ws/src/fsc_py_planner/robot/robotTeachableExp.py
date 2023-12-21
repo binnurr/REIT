@@ -24,11 +24,12 @@ from scenario.scenario_parser import ScenarioParser
 # a high level class to provide communication between all robot modules and the planner
 class Robot():
     # constructor
-    def __init__(self, rospy, session_mode, scenario_id):
+    def __init__(self, rospy, session_mode, scenario_id, behavioral_feedback):
 
         self.rospy = rospy
         self.session = session_mode
         self.scenario_id = scenario_id
+        self.is_behavioral_feedback = behavioral_feedback
         # set parameters
         self.naoqi_ip = self.rospy.get_param("~naoqi_ip", "10.0.1.3")
         #self.naoqi_ip = self.rospy.get_param("~naoqi_ip", "127.0.0.1")
@@ -329,7 +330,11 @@ class Robot():
     def load_sound_files(self):
         if self.session != "robot":
             return
-        sound_file_name = '/home/binnur/Documents/robotics/ros_ws_learner_robot/sounds/re_sounds_en.txt'
+        if self.is_behavioral_feedback:
+            sound_file_name = '/home/binnur/Documents/robotics/ros_ws_learner_robot/sounds/re_sounds_en_bf_on.txt'
+        else:
+            sound_file_name = '/home/binnur/Documents/robotics/ros_ws_learner_robot/sounds/re_sounds_en_bf_off.txt'
+        
         filePrefix = '/home/nao/binnur/sound/'
         fileExt = '.wav'
         sounds_file = open(sound_file_name)
