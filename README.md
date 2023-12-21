@@ -58,8 +58,8 @@ mamba deactivate
 conda create --name BehavioralFeedback python=3.8
 conda activate BehavioralFeedback
 conda install -c apple tensorflow-deps
-pip install tensorflow-macos
-pip install tensorflow-metal
+pip install tensorflow-macos == 2.8.0
+pip install tensorflow-metal == 0.4.0
 pip install opencv-python
 pip install scipy
 pip install pytz
