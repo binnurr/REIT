@@ -98,25 +98,23 @@ conda deactivate
 
 ### Step 4: ROS Kinetic Environment
 We use [Docker for ROS](https://hub.docker.com/_/ros) approach to create ROS Kinetic environment. Pull `ros:kinetic-ros-base-xenial` image. For more details, please refer to [here](https://hub.docker.com/layers/library/ros/kinetic-ros-base-xenial/images/sha256-a42bae4b8b66c2e256a047bf329f11730265a12a3ed29b10631f15591087112d).
-```console
+```sh
 docker pull ros:kinetic-ros-base-xenial
 ```
-```console
+```sh
 binnurgorer@Binnurs-MBP-Lab REIT % cd ros_kinetic_ws
 binnurgorer@Binnurs-MBP-Lab ros_kinetic_ws % docker build -t ros_kinetic_demo_app .
 ```
 
 ## Execution of VoREIT
-```console
-```console
+```sh
 binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_HOSTNAME=Binnurs-MBP-Lab.home    
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roscore
 ```
-```
 
-```console
+```sh
 binnurgorer@Binnurs-MBP-Lab ros_kinetic_ws % docker run -p 45100:45100 -p 45101:45101 -it --rm --mount type=bind,source="$(pwd)",target=/home/catkin_ws ros_kinetic_demo_app
 root@075f362243b6:/# export ROS_HOSTNAME=Binnurs-MBP-Lab.home
 root@075f362243b6:/# export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
@@ -125,32 +123,35 @@ root@075f362243b6:/home/catkin_ws# catkin_make
 root@075f362243b6:/home/catkin_ws# cd devel/
 root@075f362243b6:/home/catkin_ws/devel# source setup.bash 
 root@075f362243b6:/home/catkin_ws/devel# cd ..
-root@075f362243b6:/home/catkin_ws# rosrun fsc_py_planner main.py user tts 2 output="screen"
+root@075f362243b6:/home/catkin_ws# rosrun fsc_py_planner main.py --user user --agent tts --scenario 2 --behavioral_feedback True
 ```
 
-```console
+```sh
 binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export REIT_HOME=/Users/binnurgorer/Documents/binnur_projects/REIT/
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_HOSTNAME=Binnurs-MBP-Lab.home    
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % catkin_make
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % cd devel 
 (ros_env) binnurgorer@Binnurs-MBP-Lab devel % source setup.bash 
 (ros_env) binnurgorer@Binnurs-MBP-Lab devel % cd ..
-(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roslaunch obs_control re_exp.launch uname:=user session:=tts
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roslaunch obs_control re_exp.launch user:=user agent:=tts scenario:=2 behavioral_feedback:=True
 ```
 ## Execution of RoREIT
-```console
+```sh
 conda activate BehavioralFeedback
-(BehavioralFeedbackEval) binnurgorer@Binnurs-MacBook-Pro-Lab resources % python scripts/runFromFramesExp.py --subject_name=user --session=robot
+(BehavioralFeedbackEval) binnurgorer@Binnurs-MacBook-Pro-Lab resources % export REIT_HOME=/Users/binnurgorer/Documents/binnur_projects/REIT/
+(BehavioralFeedbackEval) binnurgorer@Binnurs-MacBook-Pro-Lab resources % python scripts/runFromFramesExp.py --user=user --agent=tts
 ```
-```console
+
+```sh
 binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_HOSTNAME=Binnurs-MBP-Lab.home    
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roscore
 ```
 
-```console
+```sh
 binnurgorer@Binnurs-MBP-Lab ros_kinetic_ws % docker run -p 45100:45100 -p 45101:45101 -it --rm --mount type=bind,source="$(pwd)",target=/home/catkin_ws ros_kinetic_demo_app
 root@075f362243b6:/# export ROS_HOSTNAME=Binnurs-MBP-Lab.home
 root@075f362243b6:/# export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
@@ -159,18 +160,19 @@ root@075f362243b6:/home/catkin_ws# catkin_make
 root@075f362243b6:/home/catkin_ws# cd devel/
 root@075f362243b6:/home/catkin_ws/devel# source setup.bash 
 root@075f362243b6:/home/catkin_ws/devel# cd ..
-root@075f362243b6:/home/catkin_ws# rosrun fsc_py_planner main.py user robot 2 output="screen"
+root@075f362243b6:/home/catkin_ws# rosrun fsc_py_planner main.py --user user --agent tts --scenario 2 --behavioral_feedback True
 ```
 
-```console
+```sh
 binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % mamba activate ros_env
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export REIT_HOME=/Users/binnurgorer/Documents/binnur_projects/REIT/
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_HOSTNAME=Binnurs-MBP-Lab.home    
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % catkin_make
 (ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % cd devel 
 (ros_env) binnurgorer@Binnurs-MBP-Lab devel % source setup.bash 
 (ros_env) binnurgorer@Binnurs-MBP-Lab devel % cd ..
-(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roslaunch obs_control re_exp.launch uname:=user session:=robot
+(ros_env) binnurgorer@Binnurs-MBP-Lab ros_noetic_ws % roslaunch obs_control re_exp.launch user:=user agent:=tts scenario:=2 behavioral_feedback:=True
 ```
 
 ## Roadmap
