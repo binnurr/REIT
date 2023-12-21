@@ -12,7 +12,7 @@ import keras
 from keras.models import Model
 
 from tensorflow.keras import Input
-from keras.layers.convolutional import Conv2D, MaxPooling2D
+from tensorflow.keras.layers import Conv2D, MaxPooling2D
 
 from tensorflow.keras.layers import (
     BatchNormalization, MaxPooling2D, Activation, Flatten, Dropout, Dense, Lambda
