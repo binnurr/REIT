@@ -14,11 +14,12 @@ import numpy as np
 
 
 class FeedbackAnalyzer:
-    def __init__(self, subject_name, session_type):
+    def __init__(self, subject_name, session_type, behavioral_feedback):
         rospy.init_node('feedback_analyzer', anonymous=True)
         self.subject_name = subject_name
         self.session_type = session_type
-        file_p_prefix = "/Users/binnurgorer/Documents/binnur_projects/FaceChannel-master/resources/experiment/results"
+        self.is_behavioral_feedback = behavioral_feedback
+        file_p_prefix = os.path.join(os.environ["REIT_HOME"], "BehavioralFeedbackEvaluator/resources/experiment/results")
         self.overall_result_fp = os.path.join(file_p_prefix, subject_name, session_type, "overall_results.csv")
         self.overall_result_img_fp = os.path.join(file_p_prefix, subject_name, session_type, "overall_results.png")
         try:
@@ -116,7 +117,7 @@ class FeedbackAnalyzer:
 
         num_fig = 2
         height_ratios = [1, 2]
-        if self.session_type == "robot":
+        if self.is_behavioral_feedback == "True":
             num_fig = 3
             height_ratios = [2, 1, 2]
         fig, axis = plt.subplots(num_fig, 1, figsize=(12, 18), gridspec_kw={'height_ratios': height_ratios})
@@ -225,7 +226,7 @@ class FeedbackAnalyzer:
         axis[num_fig-1].set_title('Mistake Counts per Mistake Type')
         axis[num_fig-1].legend()
 
-        if self.session_type == "robot":
+        if self.is_behavioral_feedback == "True":
             self.read_video_analysis_res()
             x = list(range(1, len(self.arousal_mean_list)+1))
             # create an index for each tick position
@@ -298,4 +299,5 @@ if __name__ == '__main__':
     args = rospy.myargv(argv=sys.argv)
     subject_name = args[1]
     session_type = args[2]
-    FeedbackAnalyzer(subject_name, session_type)
+    behavioral_feedback = args[3]
+    FeedbackAnalyzer(subject_name, session_type, behavioral_feedback)
