@@ -1,18 +1,21 @@
 <launch>
-<arg name="uname" />
-<arg name="session" />
+<arg name="user" />
+<arg name="agent" />
+<arg name="behavioral_feedback" />
 
 <node pkg="rqt_ez_publisher" type="rqt_ez_publisher" name="my_rqt_ez_publisher" args="--slider-file $(env PWD)/rqt_gui_layout.yaml" launch-prefix="bash -c 'sleep 5; $0 $@' " output="log"/>
-<node pkg="visu_ros_msg" type="visualizer.py" name="my_visu_ros_msg" args="$(arg uname) $(arg session)" output="screen"/>
-<node pkg="feedback_analyzer" type="feedback_analyzer.py" name="my_feedback_analyzer" args="$(arg uname) $(arg session)" output="screen"/>
-<node name="record" pkg="rosbag" type="record" args="-a -o $(env PWD)/exp_bag_files/$(arg uname)_$(arg session)_$(arg scenario).bag"/>
-<group if="$(eval session == 'robot')">
-  <node pkg="obs_control" type="obs_control.py" name="my_obs_controller" args="$(arg uname) $(arg session)" output="screen"/>
-  <node pkg="video_clip_time_listener" type="video_clip_time_listener.py" name="my_video_clip_time_listener" args="$(arg uname) $(arg session)" output="screen"/>
-</group>
-<group if="$(eval session == 'tts')">
+<node pkg="visu_ros_msg" type="visualizer.py" name="my_visu_ros_msg" args="$(arg user) $(arg agent)" output="screen"/>
+<node pkg="feedback_analyzer" type="feedback_analyzer.py" name="my_feedback_analyzer" args="$(arg user) $(arg agent) $(arg behavioral_feedback)" output="screen"/>
+
+<group if="$(eval agent == 'tts')">
   <node pkg="speech_synthesizer" type="speech_synthesizer.py" name="my_speech_synthesizer" output="screen"/>
-  <node pkg="rostopic" type="rostopic" name="mymy_rostopic" args="echo /text_to_say" output="screen"/>
 </group>
+
+<group if="$(eval behavioral_feedback == True)">
+  <node pkg="obs_control" type="obs_control.py" name="my_obs_controller" args="$(arg user) $(arg agent)" output="screen"/>
+  <node pkg="video_clip_time_listener" type="video_clip_time_listener.py" name="my_video_clip_time_listener" args="$(arg user) $(arg agent)" output="screen"/>
+</group>
+
+<node name="record" pkg="rosbag" type="record" args="-a -o $(env REIT_HOME)/exp_bag_files/$(arg user)_$(arg agent)_$(arg scenario).bag"/>
 
 </launch>
