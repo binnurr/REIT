@@ -7,6 +7,7 @@ import argparse
 import time
 import datetime
 import pytz
+from pathlib import Path
 
 from FaceChannel.FaceChannelV1.imageProcessingUtil import imageProcessingUtil
 from FaceChannel.FaceChannelV1.FaceChannelV1 import FaceChannelV1
@@ -104,13 +105,18 @@ class FacialExpAnalyser:
 
                 start_time = time.time()
                 frame = cv2.resize(frame, (640, 480))
-                cv2.imwrite(os.path.join(os.getcwd(), 'experiment/frames', str(question)+'_'+str(frame_count) + ".png"), frame)
+                #cv2.imwrite(os.path.join(os.getcwd(), 'experiment/frames', str(question)+'_'+str(frame_count) + ".png"), frame)
                 facePoints, face = self.imageProcessing.detectFace(frame)  # detect a face
 
                 if face is not None:  # If a face is detected
                     face = self.imageProcessing.preProcess(face, imageSize=self.faceSize)  # pre-process the face
+                    #face = numpy.reshape(numpy.ravel(face), (64, 64, 1))
+                    #cv2.imshow('test', face)
+                    #cv2.waitKey(0)
+                    
                     dimensionalRecognition = numpy.array(
                         faceChannelDim.predict(face, preprocess=False))  # Obtain dimensional classification
+        
                     #categoricalRecognition = self.faceChannelCat.predict(face, preprocess=False)[0]
                     '''
                     frame = GUIController.createDimensionalEmotionGUI(dimensionalRecognition, frame, categoricalReport=[],
@@ -153,19 +159,23 @@ class FacialExpAnalyser:
 if __name__ == "__main__":
     print("Program started")
     parser = argparse.ArgumentParser(description='Facial expression analysis.')
-    parser.add_argument('--subject_name', type=str, help='subject name')
-    parser.add_argument('--session', type=str, help='session type; tts or robot')
+    parser.add_argument('--user', type=str, help='user name')
+    parser.add_argument('--agent', type=str, help='agent type; tts or robot')
 
     args = parser.parse_args()
-    subject_name = args.subject_name
-    session_type = args.session
+    subject_name = args.user
+    session_type = args.agent
 
-    load_video_fp = os.path.join(os.getcwd(), "experiment/videos_exp2")
-    request_fp = os.path.join(os.getcwd(), "experiment/requests/exp2_post")
-    result_fp = os.path.join(os.getcwd(), "experiment/results/exp2_post")
+    load_video_fp = os.path.join(os.environ["REIT_HOME"], "BehavioralFeedbackEvaluator/resources/experiment/videos")
+    request_fp = os.path.join(os.environ["REIT_HOME"], "BehavioralFeedbackEvaluator/resources/experiment/requests")
+    result_fp = os.path.join(os.environ["REIT_HOME"], "BehavioralFeedbackEvaluator/resources/experiment/results")
+    Path(load_video_fp).mkdir(parents=True, exist_ok=True)
+    Path(request_fp).mkdir(parents=True, exist_ok=True)
+    Path(result_fp).mkdir(parents=True, exist_ok=True)
+    
 
-    offline = True
-    time_relative = True
+    offline = False
+    time_relative = False
 
     if offline:
         subject_to_file_name = {
@@ -193,8 +203,8 @@ if __name__ == "__main__":
         print("Running for subject ", subject_name)
         fea = FacialExpAnalyser(subject_name, session_type, load_video_fp, result_fp, video_name)
 
-        #s_request_fp = os.path.join(request_fp, subject_name, session_type, "request.csv")
-        s_request_fp = os.path.join(request_fp, subject_name + ".csv")
+        s_request_fp = os.path.join(request_fp, subject_name, session_type, "request.csv")
+        #s_request_fp = os.path.join(request_fp, subject_name + ".csv")
         while not os.path.exists(s_request_fp):
             time.sleep(1)
 
