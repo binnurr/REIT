@@ -10,25 +10,25 @@ from obswebsocket import obsws, requests  # noqa: E402
 class ObsControl:
     def __init__(self, subject_name, session_type):
         self.host = "localhost"
-        self.port = 4455
+        self.port = 4454
         self.password = "password"
         self.ws = obsws(self.host, self.port, self.password)
         self.ws.connect()
         self.source_settings = {
                 'owner_name': 'zoom.us',
-                'window_name': 'Zoom Meeting'
+                'window_name': 'zoom floating video window'  # Zoom Meeting
             }
         rospy.on_shutdown(self.shutdown_obs)
         self.start_recording_sub = rospy.Subscriber("is_start", String, self.start_recording)
         self.stop_recording_sub = rospy.Subscriber("stop_obs_recording", String, self.stop_recording)
 
     def start_recording(self, msg):
-        self.ws.call(requests.CreateSource(sourceName='new_zoom',
-                                      sourceKind='window_capture',
-                                      sceneName='my_scene',
-                                      sourceSettings=self.source_settings,
-                                      setVisible=True))
-        scene_item_prop = self.ws.call(requests.GetSceneItemProperties(item='new_zoom', scene_name='my_scene'))
+        self.ws.call(requests.CreateSource(sourceName = 'new_zoom',
+                                      sourceKind = 'window_capture',
+                                      sceneName = 'my_scene',
+                                      sourceSettings = self.source_settings,
+                                      setVisible = True))
+        scene_item_prop = self.ws.call(requests.GetSceneItemProperties(item= 'new_zoom', scene_name= 'my_scene'))
         bounds = scene_item_prop.getBounds()
         bounds['type'] = 'OBS_BOUNDS_SCALE_INNER'
         bounds['x'] = 1280
