@@ -28,11 +28,12 @@ from scenario.scenario_parser import ScenarioParser
 # a high level class to provide communication between all robot modules and the planner
 class Robot():
     # constructor
-    def __init__(self, rospy, session_mode, scenario_id):
+    def __init__(self, rospy, session_mode, scenario_id, behavioral_feedback):
 
         self.rospy = rospy
         self.session = session_mode
         self.scenario_id = scenario_id
+        self.is_behavioral_feedback = behavioral_feedback
         # set parameters
         self.naoqi_ip = self.rospy.get_param("~naoqi_ip", "10.0.1.3")
         #self.naoqi_ip = self.rospy.get_param("~naoqi_ip", "127.0.0.1")
@@ -341,7 +342,10 @@ class Robot():
     ############## TEXT TO SPEECH MODULE FUNCTIONS ##############
 
     def load_sound_files(self):
-        sound_file_name = '/home/catkin_ws/sounds/re_sounds_en_tts.txt'
+        if self.is_behavioral_feedback:
+            sound_file_name = '/home/catkin_ws/sounds/re_sounds_en_bf_on.txt'
+        else:
+            sound_file_name = '/home/catkin_ws/sounds/re_sounds_en_bf_off.txt'
         sounds_file = open(sound_file_name)
         for line in sounds_file:
             splitlines = line.split('-')
