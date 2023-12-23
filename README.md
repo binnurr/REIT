@@ -135,6 +135,7 @@ roscore
 ```
 
 execute ROS Kinetic environment
+* for text to speech agent
 ```sh
 export REIT_HOME = your_REIT_home_directory
 cd ($REIT_HOME)/ros_kinetic_ws
@@ -146,6 +147,9 @@ docker run -p 45100:45100 -p 45101:45101 -it --rm --mount type=bind,source="$(pw
 [inside docker] source devel/setup.bash
 [inside docker] rosrun fsc_py_planner main.py --user user --agent tts --scenario 2 --behavioral_feedback True
 ```
+* for robotic agent
+  
+
 execute ROS Noetic environment
 ```sh
 export REIT_HOME = your_REIT_home_directory
@@ -159,6 +163,12 @@ source setup.bash
 cd ..
 roslaunch obs_control re_exp.launch user:=user agent:=tts scenario:=2 behavioral_feedback:=True
 ```
+### VoREIT Configuration:
+VoREIT uses text-to-speech agent, which can be set using "tts" for the agent argument. Moreover, by design, we do not use video modality in VoREIT, and the behavioral_feedback argument is set to False.
+
+### RoREIT Configuration:
+RoREIT uses the embodied robotic agent Nao, which can be set using "robot" for the agent argument. We use video modality in RoREIT, and the behavioral_feedback argument is set to True.
+
 
 ## Roadmap
 ### Implementation Design Decisions and Further Developments
