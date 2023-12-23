@@ -42,8 +42,8 @@ We employ two ROS versions: ROS Kinetic and ROS Noetic. The NAO robotic agent re
 > [!NOTE]
 > We use NAOqi version ```naoqi-sdk-2.1.4.13```
 
-### Step 2:
-Navigate to your working path and clone the repo.
+### Step 2: Install Repo
+You can just navigate to your working path and clone the repo.
 ```sh
 clone git@github.com:binnurr/REIT.git
 cd REIT
@@ -52,6 +52,8 @@ pwd
 Save this path; we will set this path as ```$REIT_HOME```below. 
 
 ### Step 3: Behavioral Feedback Module Environment
+Setup the Python virtual environment
+
 ```sh
 conda create --name BehavioralFeedback python=3.8
 conda activate BehavioralFeedback
@@ -69,16 +71,13 @@ pip install deffcode
 > For M1 Mac users, execute the above commands in a terminal that is started by enabling Rosetta.
 
 > [!WARNING]
-> Recent version of ```tensorflow-metal``` produces incorrect results with the preloaded models on M1 Mac (check the reported issues [here]()). Please be careful with the versions.
+> Most recent version of ```tensorflow-metal``` produces incorrect results with the preloaded models on M1 Mac (check the reported issues [here]()). Please be careful with the versions.
 > To check the compatible ```tensorflow-metal``` version, please refer to https://pypi.org/project/tensorflow-metal/
 
+Add the path ```$(REIT_HOME)/BehavioralFeedbackEvaluator/resources``` to the BehavioralFeedback virtual environment.
+Create a file like ```.../miniforge3/envs/BehavioralFeedbackEval/lib/python3.8/site-packages/reit.pth``` and add the path inside.
+Then, reactive the environment to have the changes applied.
 
-
-```console
-touch /Users/binnurgorer/miniforge3/envs/BehavioralFeedbackEval/lib/python3.8/site-packages/reit.pth
-add your_working_directory/REIT/BehavioralFeedbackEvaluator/resources
-conda deactivate
-```
 
 ### Step 4: ROS Noetic Environment
 ```sh
