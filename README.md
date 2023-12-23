@@ -20,7 +20,6 @@ The Ros Kinetic Ws folder includes the source code of the interaction engine and
 We use two different distributions of ROS: ROS Kinetic and ROS Noetic. ROS Kinetic is an older distribution but works with Python2, which is required to run the NAOqi SDK of the Nao robot. 
 
 ### Step 1:
-
 Install miniforge which is a minimal installer for Conda and Mamba specific to conda-forge (conda package manager):
 - https://github.com/conda-forge/miniforge
 
@@ -54,9 +53,13 @@ We employ two ROS versions: ROS Kinetic and ROS Noetic. The NAO robotic agent re
 * Ensure Server port and password (can be accessed via OBS->Tools->Web server settings) are the same as defined in
   https://github.com/binnurr/REIT/blob/58de3c65b3b6016ba063ea0dd86bd7d2ec042e79/ros_noetic_ws/src/obs_control/scripts/obs_control.py#L13-L14
 
-
-
 ### Step 2:
+Navigate to your working path and clone the repo.
+```sh
+clone 
+```
+
+### Step 3:
 ```sh
 mamba activate ros_env
 conda install pandas=2.1.4
@@ -70,7 +73,7 @@ mamba install ros-noetic-rqt-ez-publisher
 mamba deactivate
 ```
 
-### Step 3:
+### Step 4:
 ```sh
 conda create --name BehavioralFeedback python=3.8
 conda activate BehavioralFeedback
@@ -99,7 +102,7 @@ add your_working_directory/REIT/BehavioralFeedbackEvaluator/resources
 conda deactivate
 ```
 
-### Step 4: ROS Kinetic Environment
+### Step 5: ROS Kinetic Environment
 We use [Docker for ROS](https://hub.docker.com/_/ros) approach to create ROS Kinetic environment. Pull `ros:kinetic-ros-base-xenial` image. For more details, please refer to [here](https://hub.docker.com/layers/library/ros/kinetic-ros-base-xenial/images/sha256-a42bae4b8b66c2e256a047bf329f11730265a12a3ed29b10631f15591087112d).
 ```sh
 docker pull ros:kinetic-ros-base-xenial
