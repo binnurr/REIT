@@ -21,7 +21,7 @@ We use two different distributions of ROS: ROS Kinetic and ROS Noetic. ROS Kinet
 
 ### Step 1:
 
-Install miniforge which is a minimal installer for Conda and Mamba specific to conda-forge (conda package manager)
+Install miniforge which is a minimal installer for Conda and Mamba specific to conda-forge (conda package manager):
 - https://github.com/conda-forge/miniforge
 
 Install Docker:
@@ -36,12 +36,11 @@ Install ROS (Robot Operating System):
 
 We employ two ROS versions: ROS Kinetic and ROS Noetic. The NAO robotic agent relies on NAOqi, which is compatible only with Python version 2. Consequently, the agent module operates within the ROS Kinetic environment, specifically designed to support Python version 2. We use ROS Noetic (based on Python v3) for the other modules implemented in Python v3. For the installation of ROS Noetic, please refer to https://robostack.github.io/GettingStarted.html. For ROS Noetic, we must use [native installation](https://wiki.ros.org/noetic/Installation) on a Linux environment to [install the NAOqi](http://doc.aldebaran.com/2-8/dev/python/install_guide.html) required to connect the Nao robot (for RoREIT). We can execute ROS Kinetic in a Docker environment which can  
 > [!NOTE]
->  Use Python version 3.9.18 while creating the Python virtual environment in the Ros Noetic installation from Robostack.  ```sh mamba create -n ros_env python=3.9.18```
+>  Use Python version 3.9.18 while creating the Python virtual environment in the Ros Noetic installation from Robostack.
+> ```sh mamba create -n ros_env python=3.9.18```
 
 > [!NOTE]
 > We use NAOqi version ```naoqi-sdk-2.1.4.13```
- 
-Download and install NAOqi http://doc.aldebaran.com/2-8/dev/python/install_guide.html
 
 ### OBS Configuration:
 * For the obs-websocket document, please refer to https://github.com/obsproject/obs-websocket/blob/4.x-compat/docs/generated/protocol.md
