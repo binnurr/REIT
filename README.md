@@ -204,4 +204,24 @@ Binnur Gorer - binnur.gorer@boun.edu.tr
   - https://stackoverflow.com/questions/72964800/what-is-the-proper-way-to-install-tensorflow-on-apple-m1-in-2022
 * Facial expression analyzer library
   - https://github.com/pablovin/FaceChannel/
-  
+ 
+
+%| :exclamation:  This is very important   |
+%|-----------------------------------------|
+
+%| :zap:        Ignore at your own risk!   |
+%|-----------------------------------------|
+
+%| :memo:        | Take note of this       |
+%|---------------|:------------------------|
+
+%| :point_up:    | Remember to not forget! |
+%|---------------|:------------------------|
+
+%| :warning: WARNING          |
+%|:---------------------------|
+%| I should warn you ...      |
+
+%| :boom: DANGER              |
+%|:---------------------------|
+%| Will explode when clicked! |  
