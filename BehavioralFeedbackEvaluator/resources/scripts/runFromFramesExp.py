@@ -72,7 +72,7 @@ class FacialExpAnalyser:
 
         result_fp = os.path.join(self.result_fp, question + ".csv")
         try:
-            os.remove(self.result_fp)
+            os.remove(result_fp)
         except OSError:
             pass
         os.makedirs(os.path.dirname(result_fp), exist_ok=True)

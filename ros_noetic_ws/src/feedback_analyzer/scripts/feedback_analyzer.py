@@ -117,7 +117,7 @@ class FeedbackAnalyzer:
 
         num_fig = 2
         height_ratios = [1, 2]
-        if self.is_behavioral_feedback == "True":
+        if self.is_behavioral_feedback:
             num_fig = 3
             height_ratios = [2, 1, 2]
         fig, axis = plt.subplots(num_fig, 1, figsize=(12, 18), gridspec_kw={'height_ratios': height_ratios})
@@ -226,7 +226,7 @@ class FeedbackAnalyzer:
         axis[num_fig-1].set_title('Mistake Counts per Mistake Type')
         axis[num_fig-1].legend()
 
-        if self.is_behavioral_feedback == "True":
+        if self.is_behavioral_feedback:
             self.read_video_analysis_res()
             x = list(range(1, len(self.arousal_mean_list)+1))
             # create an index for each tick position
@@ -299,5 +299,5 @@ if __name__ == '__main__':
     args = rospy.myargv(argv=sys.argv)
     subject_name = args[1]
     session_type = args[2]
-    behavioral_feedback = args[3]
+    behavioral_feedback = bool(args[3])
     FeedbackAnalyzer(subject_name, session_type, behavioral_feedback)
