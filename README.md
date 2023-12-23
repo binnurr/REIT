@@ -197,9 +197,9 @@ Binnur Gorer - binnur.gorer@boun.edu.tr
 
 ## Acknowledgements
 * Using ROS in a Docker container
-  -https://medium.com/@vikramsetty169/using-ros-in-a-docker-container-862bcbd9d4bf
+  - https://medium.com/@vikramsetty169/using-ros-in-a-docker-container-862bcbd9d4bf
 * Solution to get ROS messages from ROS Master running on the host from ROS on Docker as the slave node as ```--net=host``` option does not work in Mac
-  -https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
+  - https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
 * Installation of Tensorflow on M1 Mac:
   - https://caffeinedev.medium.com/how-to-install-tensorflow-on-m1-mac-8e9b91d93706
   - https://stackoverflow.com/questions/72964800/what-is-the-proper-way-to-install-tensorflow-on-apple-m1-in-2022
