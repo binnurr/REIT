@@ -205,23 +205,24 @@ Binnur Gorer - binnur.gorer@boun.edu.tr
 * Facial expression analyzer library
   - https://github.com/pablovin/FaceChannel/
  
+<!---
+| :exclamation:  This is very important   |
+|-----------------------------------------|
 
-%| :exclamation:  This is very important   |
-%|-----------------------------------------|
+| :zap:        Ignore at your own risk!   |
+|-----------------------------------------|
 
-%| :zap:        Ignore at your own risk!   |
-%|-----------------------------------------|
+| :memo:        | Take note of this       |
+|---------------|:------------------------|
 
-%| :memo:        | Take note of this       |
-%|---------------|:------------------------|
+| :point_up:    | Remember to not forget! |
+|---------------|:------------------------|
 
-%| :point_up:    | Remember to not forget! |
-%|---------------|:------------------------|
+| :warning: WARNING          |
+|:---------------------------|
+| I should warn you ...      |
 
-%| :warning: WARNING          |
-%|:---------------------------|
-%| I should warn you ...      |
-
-%| :boom: DANGER              |
-%|:---------------------------|
-%| Will explode when clicked! |  
+| :boom: DANGER              |
+|:---------------------------|
+| Will explode when clicked! |  
+-->
