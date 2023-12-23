@@ -33,6 +33,7 @@ Install [OBS Studio](https://obsproject.com/) (required for video streaming of u
 > OBS v28.0.0 comes with obs-websocket v5, which is incompatible with ```obs-websocket-py``` library we use in our system. We need to separately install version 4 of the WebSocket plugin from https://github.com/obsproject/obs-websocket/releases/tag/4.9.1-compat 
 
 Install ROS (Robot Operating System):
+
 We employ two ROS versions: ROS Kinetic and ROS Noetic. The NAO robotic agent relies on NAOqi, which is compatible only with Python version 2. Consequently, the agent module operates within the ROS Kinetic environment, specifically designed to support Python version 2.
 
   * For Linux: https://wiki.ros.org/noetic/Installation
