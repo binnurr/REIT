@@ -74,12 +74,13 @@ pip install deffcode
 > Most recent version of ```tensorflow-metal``` produces incorrect results with the preloaded models on M1 Mac (check the reported issues [here]()). Please be careful with the versions.
 > To check the compatible ```tensorflow-metal``` version, please refer to https://pypi.org/project/tensorflow-metal/
 
-Add the path ```$(REIT_HOME)/BehavioralFeedbackEvaluator/resources``` to the BehavioralFeedback virtual environment.
+Add the path ```($REIT_HOME)/BehavioralFeedbackEvaluator/resources``` to the BehavioralFeedback virtual environment.
 Create a file like ```.../miniforge3/envs/BehavioralFeedbackEval/lib/python3.8/site-packages/reit.pth``` and add the path inside.
 Then, reactive the environment to have the changes applied.
 
 
 ### Step 4: ROS Noetic Environment
+Install the required packages into the ROS Noetic environment
 ```sh
 mamba activate ros_env
 conda install pandas=2.1.4
@@ -94,13 +95,14 @@ mamba deactivate
 ```
 
 ### Step 5: ROS Kinetic Environment
-We use [Docker for ROS](https://hub.docker.com/_/ros) approach to create ROS Kinetic environment. Pull `ros:kinetic-ros-base-xenial` image. For more details, please refer to [here](https://hub.docker.com/layers/library/ros/kinetic-ros-base-xenial/images/sha256-a42bae4b8b66c2e256a047bf329f11730265a12a3ed29b10631f15591087112d).
+We use [Docker for ROS](https://hub.docker.com/_/ros) approach to create a ROS Kinetic environment. Pull `ros:kinetic-ros-base-xenial` image. For more details, please refer to [here](https://hub.docker.com/layers/library/ros/kinetic-ros-base-xenial/images/sha256-a42bae4b8b66c2e256a047bf329f11730265a12a3ed29b10631f15591087112d).
 ```sh
 docker pull ros:kinetic-ros-base-xenial
 ```
+Then, build the Docker image provided in the ```ros_kinetic_ws``` folder.
 ```sh
-binnurgorer@Binnurs-MBP-Lab REIT % cd ros_kinetic_ws
-binnurgorer@Binnurs-MBP-Lab ros_kinetic_ws % docker build -t ros_kinetic_demo_app .
+cd ($REIT_HOME)/ros_kinetic_ws
+docker build -t ros_kinetic_demo_app .
 ```
 
 ### Step 6: OBS Configuration:
