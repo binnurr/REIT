@@ -56,8 +56,11 @@ We employ two ROS versions: ROS Kinetic and ROS Noetic. The NAO robotic agent re
 ### Step 2:
 Navigate to your working path and clone the repo.
 ```sh
-clone 
+clone git@github.com:binnurr/REIT.git
+cd REIT
+pwd
 ```
+Save this path; we will set this path as ```$REIT_HOME```below. 
 
 ### Step 3:
 ```sh
