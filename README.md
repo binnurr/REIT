@@ -35,8 +35,8 @@ Install [OBS Studio](https://obsproject.com/) (required for video streaming of u
 Install ROS (Robot Operating System):
   * For Linux: https://wiki.ros.org/noetic/Installation
   * For Mac: https://robostack.github.io/GettingStarted.html
-    > [!NOTE]
-    >  use python version 3.9.18 while creating the python virtual environment.  ```sh mamba create -n ros_env python=3.9.18```
+  > [!NOTE]
+  >  use python version 3.9.18 while creating the python virtual environment.  ```sh mamba create -n ros_env python=3.9.18```
  
 Download and install NAOqi http://doc.aldebaran.com/2-8/dev/python/install_guide.html
 
