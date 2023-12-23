@@ -95,7 +95,7 @@ mamba deactivate
 ```
 
 ### Step 5: ROS Kinetic Environment
-We use [Docker for ROS](https://hub.docker.com/_/ros) approach to create a ROS Kinetic environment. Pull `ros:kinetic-ros-base-xenial` image. For more details, please refer to [here](https://hub.docker.com/layers/library/ros/kinetic-ros-base-xenial/images/sha256-a42bae4b8b66c2e256a047bf329f11730265a12a3ed29b10631f15591087112d).
+We use [Docker for ROS](https://hub.docker.com/_/ros) approach to create a ROS Kinetic environment. Pull the image as per the command shown in Docker Hub Pull. For more details, please refer to [here](https://hub.docker.com/layers/library/ros/kinetic-ros-base-xenial/images/sha256-a42bae4b8b66c2e256a047bf329f11730265a12a3ed29b10631f15591087112d).
 ```sh
 docker pull ros:kinetic-ros-base-xenial
 ```
@@ -196,7 +196,8 @@ All the examples in this repository are distributed under a Non-Commercial licen
 Binnur Gorer - binnur.gorer@boun.edu.tr
 
 ## Acknowledgements
-
+* Using ROS in a Docker container
+  -https://medium.com/@vikramsetty169/using-ros-in-a-docker-container-862bcbd9d4bf
 * Solution to get ROS messages from ROS Master running on the host from ROS on Docker as the slave node as ```--net=host``` option does not work in Mac
   -https://medium.com/@yasuhirachiba/specifying-port-to-be-used-by-ros1-node-bd9dfd8643c6
 * Installation of Tensorflow on M1 Mac:
