@@ -173,7 +173,7 @@ VoREIT uses text-to-speech agent, which can be set using "tts" for the agent arg
 RoREIT uses the embodied robotic agent Nao, which can be set using "robot" for the agent argument. We use video modality in RoREIT, and the behavioral_feedback argument is set to True.
 
 ## Automatization of REIT execution
-The execution steps of REIT can be automated by scripting. We share the apple script prepared to execute VoREIT in the [repo](https://github.com/binnurr/REIT/blob/main/reit_run.scpt). You can modify the script for your environment.
+The execution steps of REIT can be automated by scripting. We share the apple scripts in the repo to execute [VoREIT]() and [RoREIT](https://github.com/binnurr/REIT/blob/4d679f1589d8dd17021619cfb42a10e85415b63f/roreit_run.scpt) in the repo. You can modify the script for your environment.
 
 ## Roadmap
 ### Implementation Design Decisions and Further Developments
