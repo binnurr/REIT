@@ -5,8 +5,8 @@ from planner.state import State
 from planner.transition.time_elapsed_t import TimeElapsedT
 from planner.transition.static_motion_done_t import StaticMotionDoneT
 from planner.transition.ros_msg_t import RosMsgT
-#from planner.transition.speech_done_t import SpeechDoneT
-from planner.transition.remote_speech_done_t import SpeechDoneT
+
+
 from planner.transition.always_true_t import AlwaysTrueT
 # from planner.transition.speech_recognized_t import SpeechRecognizedT
 # from planner.transition.speech_recognized_naoqi_t import SpeechRecognizedNaoqiT
@@ -55,6 +55,10 @@ class RERobot(FSC):
 
     # constructor
     def __init__(self, robot, name):
+        if robot.session == "tts":
+            from planner.transition.remote_speech_done_t import SpeechDoneT
+        elif robot.session == "robot":
+            from planner.transition.speech_done_t import SpeechDoneT
         # call base classes constructor
         FSC.__init__(self, robot, name)
 
