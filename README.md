@@ -156,17 +156,17 @@ execute ROS Kinetic environment
   export ROS_MASTER_URI=http://$ROS_IP:11311
   roscore
   ```
-and run fsc_py_planner in another terminal:
-  ```sh
-  export ROS_IP=your_IP
-  export ROS_MASTER_URI=http://$ROS_IP:11311
-  cd your_ros_kinetic_workspace
-  catkin_make
-  source devel/setup.bash
-  rosrun fsc_py_planner main.py --user user --agent robot --scenario 2 --behavioral_feedback True
-  ```
-> [!IMPORTANT]
-> You need a local network to connect the computing platforms running ROS modules and the Nao robot. You need to set ROS_IP to the static IP for each platform instead of ROS_HOSTNAME. ROS_MASTER_URI should be set to the IP of the platform that runs the native Linux environment communicating to the Nao Robot. Please check the RoREIT script as an example.
+  and run fsc_py_planner in another terminal:
+    ```sh
+    export ROS_IP=your_IP
+    export ROS_MASTER_URI=http://$ROS_IP:11311
+    cd your_ros_kinetic_workspace
+    catkin_make
+    source devel/setup.bash
+    rosrun fsc_py_planner main.py --user user --agent robot --scenario 2 --behavioral_feedback True
+    ```
+  > [!IMPORTANT]
+  > You need a local network to connect the computing platforms running ROS modules and the Nao robot. You need to set ROS_IP to the static IP for each platform instead of ROS_HOSTNAME. ROS_MASTER_URI should be set to the IP of the platform that runs the native Linux environment communicating to the Nao Robot. Please check the RoREIT script as an example.
   
 execute ROS Noetic environment
 ```sh
