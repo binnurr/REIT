@@ -117,7 +117,7 @@ docker build -t ros_kinetic_demo_app .
   https://github.com/binnurr/REIT/blob/58de3c65b3b6016ba063ea0dd86bd7d2ec042e79/ros_noetic_ws/src/obs_control/scripts/obs_control.py#L13-L14
   
 ## Execution of REIT
-> [!NOTE]
+> [!IMPORTANT]
 > First of all, start Docker Deamon and OBS Studio.
 
 You need to initiate the Behavioral Feedback module to use the Behavioral Feedback feature. 
