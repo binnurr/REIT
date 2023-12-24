@@ -139,20 +139,35 @@ roscore
 
 execute ROS Kinetic environment
 * for text to speech agent
-```sh
-export REIT_HOME = your_REIT_home_directory
-cd ($REIT_HOME)/ros_kinetic_ws
-docker run -p 45100:45100 -p 45101:45101 -it --rm --mount type=bind,source="$(pwd)",target=/home/catkin_ws ros_kinetic_demo_app
-[inside docker] export ROS_HOSTNAME=your_hostname
-[inside docker] export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
-[inside docker] cd /home/catkin_ws/
-[inside docker] catkin_make
-[inside docker] source devel/setup.bash
-[inside docker] rosrun fsc_py_planner main.py --user user --agent tts --scenario 2 --behavioral_feedback True
-```
-* for robotic agent
+  ```sh
+  export REIT_HOME = your_REIT_home_directory
+  cd ($REIT_HOME)/ros_kinetic_ws
+  docker run -p 45100:45100 -p 45101:45101 -it --rm --mount type=bind,source="$(pwd)",target=/home/catkin_ws ros_kinetic_demo_app
+  [inside docker] export ROS_HOSTNAME=your_hostname
+  [inside docker] export ROS_MASTER_URI=http://$ROS_HOSTNAME:11311
+  [inside docker] cd /home/catkin_ws/
+  [inside docker] catkin_make
+  [inside docker] source devel/setup.bash
+  [inside docker] rosrun fsc_py_planner main.py --user user --agent tts --scenario 2 --behavioral_feedback True
+  ```
+* for robotic agent, we need a native Linux environment with ROS Kinetic and NAOqi installed. In this environment, first, initiate roscore:
+  ```sh
+  export ROS_IP=your_IP
+  export ROS_MASTER_URI=http://$ROS_IP:11311
+  roscore
+  ```
+and run fsc_py_planner in another terminal:
+  ```sh
+  export ROS_IP=your_IP
+  export ROS_MASTER_URI=http://$ROS_IP:11311
+  cd your_ros_kinetic_workspace
+  catkin_make
+  source devel/setup.bash
+  rosrun fsc_py_planner main.py --user user --agent robot --scenario 2 --behavioral_feedback True
+  ```
+> [!IMPORTANT]
+> You need a local network to connect the computing platforms running ROS modules and the Nao robot. You need to set ROS_IP to the static IP for each platform instead of ROS_HOSTNAME. ROS_MASTER_URI should be set to the IP of the platform that runs the native Linux environment communicating to the Nao Robot. Please check the RoREIT script as an example.
   
-
 execute ROS Noetic environment
 ```sh
 export REIT_HOME = your_REIT_home_directory
@@ -176,7 +191,7 @@ RoREIT uses the embodied robotic agent Nao, which can be set using "robot" for t
 The execution steps of REIT can be automated by scripting. We share the apple scripts in the repo to execute [VoREIT](https://github.com/binnurr/REIT/blob/4d679f1589d8dd17021619cfb42a10e85415b63f/voreit_run.scpt) and [RoREIT](https://github.com/binnurr/REIT/blob/4d679f1589d8dd17021619cfb42a10e85415b63f/roreit_run.scpt) in the repo. You can modify the script for your environment.
 
 ## Roadmap
-### Implementation Design Decisions and Further Developments
+### Design Decisions and Further Developments
 The Naoqi Python SDK contains native libraries compiled for Linux and amd64 (aka Intel x64) processors. The M1 Macbook has an arm64 processor.
 The executable library `_qi.so` is reported as non-existent because it cannot execute it. 
 The Naoqi docker solution mentioned [here](https://github.com/remcorakers/naoqi-docker) does not work
