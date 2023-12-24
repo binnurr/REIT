@@ -1,0 +1,1 @@
+This folder stores the experiment log files recorded by ROS.
